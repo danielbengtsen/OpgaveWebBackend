@@ -80,7 +80,7 @@ public class UserMapper {
             Connection con = Connector.connection();
             String SQL = "DELETE FROM useradmin.users WHERE email='"+ email +"';";
             PreparedStatement ps = con.prepareStatement(SQL);
-            ps.executeQuery();
+            ps.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
