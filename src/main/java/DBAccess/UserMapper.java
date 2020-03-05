@@ -75,4 +75,15 @@ public class UserMapper {
         return liste;
     }
 
+    public static void deleteUser(String email) {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "DELETE FROM useradmin.users WHERE email='"+ email +"';";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.executeQuery();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

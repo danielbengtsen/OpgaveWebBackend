@@ -18,7 +18,7 @@
 
 
 
-        You are now logged in as a EMPLOYEE of our wonderful site.
+        You are now logged in as an EMPLOYEE of our wonderful site.
 
         <br>
         <br>
@@ -28,8 +28,6 @@
             <input type="submit" value="Gå til oversigt">
         </form>
 
-        <br>
-        <br>
         <br>
         <br>
 
@@ -52,6 +50,19 @@
 
         <br>
         <br>
+
+        ${sessionScope.besked}
+
+        <form name="deleteUser" action="FrontController" method="POST">
+            <input type="hidden" name="target" value="deleteUser">
+            Indtast Email på kunde som skal slettes:<br>
+            <input type="text" name="email">
+            <input type="submit" value="Slet">
+        </form>
+
+        <br>
+        <br>
+
         <form name ="logout" action="FrontController" method="POST">
             <input type="hidden" name="target" value="logout">
             <input type="submit" value="Logout">
