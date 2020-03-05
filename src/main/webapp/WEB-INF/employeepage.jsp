@@ -50,8 +50,10 @@
             </form>
         </td>
 
-
+        <br>
+        <br>
         <form name ="logout" action="FrontController" method="POST">
+            <input type="hidden" name="target" value="logout">
             <input type="submit" value="Logout">
         </form>
 

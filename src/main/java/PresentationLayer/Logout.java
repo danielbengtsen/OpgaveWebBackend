@@ -10,10 +10,9 @@ import java.io.IOException;
 public class Logout extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
+        request.getSession().invalidate();
         try {
-            request.getRequestDispatcher("index.jsp").forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            response.getWriter().println("Du kom igennem");
         } catch (IOException e) {
             e.printStackTrace();
         }

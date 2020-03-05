@@ -19,6 +19,7 @@
         You are now logged in as a customer of our wonderful site.
 
         <form name ="logout" action="FrontController" method="POST">
+            <input type="hidden" name="target" value="logout">
             <input type="submit" value="Logout">
         </form>
 
