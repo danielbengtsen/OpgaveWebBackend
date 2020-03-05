@@ -51,5 +51,9 @@
         </td>
 
 
+        <form name ="logout" action="FrontController" method="POST">
+            <input type="submit" value="Logout">
+        </form>
+
     </body>
 </html>
