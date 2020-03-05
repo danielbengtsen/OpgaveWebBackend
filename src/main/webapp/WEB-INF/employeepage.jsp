@@ -19,5 +19,15 @@
 
 
         You are now logged in as a EMPLOYEE of our wonderful site.
+
+        <br>
+        <br>
+
+        <form name="show" action="FrontController" method="POST">
+            <input type="hidden" name="target" value="show">
+            <input type="submit" value="Gå til oversigt">
+        </form>
+
+
     </body>
 </html>

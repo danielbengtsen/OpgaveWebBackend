@@ -50,12 +50,6 @@
         </table>
 
 
-        <form name="show" action="FrontController" method="POST">
-            <input type="hidden" name="target" value="show">
-            <input type="submit" value="Gå til oversigt">
-        </form>
-
-
 <%--        Bare lige se I har en ide om hvad vi forslå I ikke gør ! det hedder scpript lets --%>
 <%--        <% String error = (String) request.getAttribute( "error");--%>
 <%--           if ( error != null) { --%>

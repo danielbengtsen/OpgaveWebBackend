@@ -13,15 +13,18 @@
 </head>
 <body>
 
-<%--<c:forEach var="element" items="${sessionScope.oversigt}">--%>
-<%--    ${sessionScope.oversigt}--%>
-<%--    <br>--%>
-<%--    <br>--%>
-<%--    <br>--%>
-<%--    <h1>BREAK</h1>--%>
-<%--</c:forEach>--%>
+<h1>Liste over registrerede kunder:</h1>
 
-<h3>${sessionScope.oversigt}</h3>
+<c:forEach var="element" items="${sessionScope.customerOversigt}">
+    ${element}
+    <br>
+</c:forEach>
+
+    <br>
+
+    <h2>Samlede antal registrerede kunder:</h2>
+
+    Der er ${sessionScope.customerCount} antal kunder registreret.
 
 </body>
 </html>

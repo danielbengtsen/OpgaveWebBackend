@@ -13,11 +13,17 @@ import java.util.ArrayList;
 public class PresentUsers extends Command {
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
-        ArrayList<User> listen = UserMapper.getUsers();
+        ArrayList<User> customerList = UserMapper.getUsers();
+
+        int count = 0;
+        for (User u: customerList) {
+            count++;
+        }
 
         HttpSession session = request.getSession();
 
-        session.setAttribute("oversigt", listen);
+        session.setAttribute("customerOversigt", customerList);
+        session.setAttribute("customerCount", count);
 
         return "oversigt" + "page";
     }

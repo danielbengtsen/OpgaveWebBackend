@@ -58,7 +58,7 @@ public class UserMapper {
         ArrayList<User> liste = new ArrayList<>();
         try {
             Connection con = Connector.connection();
-            String SQL = "SELECT * FROM useradmin.users;";
+            String SQL = "SELECT * FROM useradmin.users WHERE role = 'customer'";
             PreparedStatement ps = con.prepareStatement(SQL);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
