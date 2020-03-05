@@ -63,6 +63,7 @@
         <br>
         <br>
 
+        ${sessionScope.skiftbesked}
         <form name="changePassword" action="FrontController" method="POST">
             <input type="hidden" name="target" value="changePassword">
             Email:<br>
