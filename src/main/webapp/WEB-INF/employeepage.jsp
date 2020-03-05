@@ -74,6 +74,7 @@
             Skriv Nyt Password Igen:<br>
             <input type="password" name="password2">
             <br>
+            <input type="submit" value="Skift">
         </form>
 
         <form name ="logout" action="FrontController" method="POST">
