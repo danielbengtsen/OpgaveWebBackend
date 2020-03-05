@@ -81,6 +81,9 @@ public class UserMapper {
             String SQL = "DELETE FROM useradmin.users WHERE email='"+ email +"';";
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.executeUpdate();
+
+            con.close();
+            ps.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
