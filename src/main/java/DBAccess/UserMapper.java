@@ -86,4 +86,15 @@ public class UserMapper {
         }
     }
 
+    public static void changePassword(String email, String newpw) {
+        try {
+            Connection con = Connector.connection();
+            String SQL = "UPDATE useradmin.users SET password='"+newpw+"' WHERE email='"+email+"';";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
