@@ -63,6 +63,19 @@
         <br>
         <br>
 
+        <form name="changePassword" action="FrontController" method="POST">
+            <input type="hidden" name="target" value="changePassword">
+            Email:<br>
+            <input type="text" name="email">
+            <br>
+            Nyt Password:<br>
+            <input type="password" name="password1">
+            <br>
+            Skriv Nyt Password Igen:<br>
+            <input type="password" name="password2">
+            <br>
+        </form>
+
         <form name ="logout" action="FrontController" method="POST">
             <input type="hidden" name="target" value="logout">
             <input type="submit" value="Logout">
