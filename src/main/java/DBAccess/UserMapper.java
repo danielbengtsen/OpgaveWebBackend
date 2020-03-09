@@ -26,6 +26,9 @@ public class UserMapper {
             ids.next();
             int id = ids.getInt( 1 );
             user.setId( id );
+            con.close();
+            ps.close();
+            ids.close();
         } catch ( SQLException | ClassNotFoundException ex ) {
             throw new LoginSampleException( ex.getMessage() );
         }
@@ -49,6 +52,9 @@ public class UserMapper {
             } else {
                 throw new LoginSampleException( "Could not validate user" );
             }
+            con.close();
+            ps.close();
+            rs.close();
         } catch ( ClassNotFoundException | SQLException ex ) {
             throw new LoginSampleException(ex.getMessage());
         }
@@ -68,7 +74,9 @@ public class UserMapper {
                 User tmp = new User(email, password, role);
                 liste.add(tmp);
             }
-
+            con.close();
+            ps.close();
+            rs.close();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -95,6 +103,8 @@ public class UserMapper {
             String SQL = "UPDATE useradmin.users SET password='"+newpw+"' WHERE email='"+email+"';";
             PreparedStatement ps = con.prepareStatement(SQL);
             ps.executeUpdate();
+            con.close();
+            ps.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
