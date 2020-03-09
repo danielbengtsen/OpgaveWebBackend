@@ -36,13 +36,13 @@
             <form name="registerEmployee" action="FrontController" method="POST">
                 <input type="hidden" name="target" value="registerEmployee">
                 Email:<br>
-                <input type="text" name="email" value="someone@nowhere.com">
+                <input type="text" name="email">
                 <br>
                 Password:<br>
-                <input type="password" name="password1" value="sesam">
+                <input type="password" name="password1">
                 <br>
                 Skriv Password Igen:<br>
-                <input type="password" name="password2" value="sesam">
+                <input type="password" name="password2">
                 <br>
                 <input type="submit" value="Send">
             </form>
@@ -51,8 +51,8 @@
         <br>
         <br>
 
+        <h3>Slet en kunde:</h3>
         ${sessionScope.besked}
-
         <form name="deleteUser" action="FrontController" method="POST">
             <input type="hidden" name="target" value="deleteUser">
             Indtast Email på kunde som skal slettes:<br>
@@ -63,6 +63,8 @@
         <br>
         <br>
 
+
+        <h3>Skift adgangskoden på en bruger:</h3>
         ${sessionScope.skiftbesked}
         <form name="changePassword" action="FrontController" method="POST">
             <input type="hidden" name="target" value="changePassword">
@@ -77,6 +79,9 @@
             <br>
             <input type="submit" value="Skift">
         </form>
+
+        <br>
+        <br>
 
         <form name ="logout" action="FrontController" method="POST">
             <input type="hidden" name="target" value="logout">

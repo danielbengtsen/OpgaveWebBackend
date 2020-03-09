@@ -18,7 +18,7 @@ public class ChangePassword extends Command {
             UserMapper.changePassword(email, password1);
             HttpSession session = request.getSession();
 
-            session.setAttribute("skiftbesked", "Brugeren med Email: "+ email +" har fået ændret password.");
+            session.setAttribute("skiftbesked", "Brugeren med Email: "+ email +" har fået ændret password til: " + password1);
             return "employeepage";
         } else {
             throw new LoginSampleException("The two passwords did not match");
